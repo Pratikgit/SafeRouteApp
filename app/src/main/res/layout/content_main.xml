@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPurple"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="edu.umbc.smartroute.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+    <fragment
+        android:id="@+id/startplace_autocomplete_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_margin="7dp"
+        android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+        />
+    <fragment
+        android:id="@+id/endplace_autocomplete_fragment"
+        android:layout_below="@+id/startplace_autocomplete_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+        />
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:layout_below="@+id/endplace_autocomplete_fragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="umbc.edu.smartroute.MainActivity" />
+
+    <TextView
+        android:id="@+id/greenLabelIndicator"
+        android:text="safest"
+        android:background="@drawable/rounded_corner_greeen"
+        android:textColor="@android:color/white"
+        android:layout_width="80dp"
+        android:layout_margin="4dp"
+        android:textAlignment="center"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/orangeLabelIndicator"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/orangeLabelIndicator"
+        android:text="med safe"
+        android:background="@drawable/rounded_corner_orange"
+        android:textColor="@android:color/white"
+        android:layout_width="80dp"
+        android:layout_margin="4dp"
+        android:textAlignment="center"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/redLabelIndicator"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/redLabelIndicator"
+        android:text="unsafe"
+        android:background="@drawable/rounded_corner_red"
+        android:textColor="@android:color/white"
+        android:layout_width="80dp"
+        android:layout_margin="4dp"
+        android:textAlignment="center"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/reqBtn"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/reqBtn"
+        android:text="REQUEST SAFE SCORE"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
