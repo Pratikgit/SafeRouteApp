@@ -5,6 +5,6 @@ package utils;
  */
 
 public class ApplicationConfiguration {
-    public static final String SERVER_URL= "http://b8ac4d5c.ngrok.io/safe_controller/index?";
+    public static final String SERVER_URL= "http://ec2-35-161-196-226.us-west-2.compute.amazonaws.com:5000/safe_controller/index?";
 
 }
