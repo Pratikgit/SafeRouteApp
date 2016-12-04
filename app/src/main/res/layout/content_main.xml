@@ -72,7 +72,7 @@
 
     <Button
         android:id="@+id/reqBtn"
-        android:text="REQUEST SAFE SCORE"
+        android:text="REQUEST SAFE PATH"
         android:background="@color/colorPrimary"
         android:textColor="@android:color/white"
         android:layout_alignParentBottom="true"

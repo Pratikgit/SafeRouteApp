@@ -511,7 +511,7 @@ public class MainActivity extends AppCompatActivity
                     lineOptions.width(20);
                 }
                 else if(i==1)
-                 lineOptions.color(getResources().getColor(R.color.colorOrange));
+                 lineOptions.color(getResources().getColor(R.color.colorRed));
             }else if(encodeStList.size() == 3) {
                 if(i==0) {
                     lineOptions.color(getResources().getColor(R.color.colorGreen));
